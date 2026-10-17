@@ -57,23 +57,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Contact form (Formspree-style fetch)
-  const form = document.querySelector('#contact-form');
-  if (form) {
-    const status = form.querySelector('.form-status');
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-      if (form.querySelector('.hp input').value) return; // honeypot
-      status.className = 'form-status'; status.textContent = 'Sending...';
-      try {
-        const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-        if (!r.ok) throw 0;
-       window.location.href = '/thank-you.html';
-return;
-      } catch {
-        status.classList.add('err');
-        status.textContent = 'Something went wrong. Please call (719) 963-1496 or email us directly.';
-      }
-    });
-  }
-});
+  
