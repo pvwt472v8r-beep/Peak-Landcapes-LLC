@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
         if (!r.ok) throw 0;
-        form.reset(); status.classList.add('ok');
-        status.textContent = 'Thank you! We received your request and will reply within one business day.';
+       window.location.href = '/thank-you.html';
+return;
       } catch {
         status.classList.add('err');
         status.textContent = 'Something went wrong. Please call (719) 963-1496 or email us directly.';
