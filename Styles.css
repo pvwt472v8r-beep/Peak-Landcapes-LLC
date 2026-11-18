@@ -117,6 +117,8 @@ p{margin:0 0 1em}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem}
 .site-footer h3{color:#fff;font-size:1.3rem}
 .site-footer a{color:var(--stone)}
+.site-credit{margin:1rem auto 0;padding:0 1rem;font-size:.8rem}
+.site-credit a{text-decoration:underline;text-underline-offset:.2em}
 .social{display:flex;gap:1rem;justify-content:center;margin-top:.8rem}
 .social a{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;transition:.25s}
 .social a:hover{background:var(--gold);transform:translateY(-3px)}
